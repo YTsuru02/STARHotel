@@ -4,6 +4,11 @@ import java.io.File;
 
 import org.junit.Test;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import core.ChromeDriverTest;
 
 /**
@@ -18,6 +23,8 @@ public class IntroWork2Test extends ChromeDriverTest {
 
         // TODO 以下を削除して、代わりにOKボタンをクリックする処理を記述してください
         Thread.sleep(8000);
+        WebElement ok = driver.findElement(By.id("ok_button"));
+        ok.click();
         // TODO ここまで削除してください
     }
 }

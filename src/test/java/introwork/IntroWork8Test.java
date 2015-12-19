@@ -2,6 +2,9 @@ package introwork;
 
 import core.ChromeDriverTest;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
 
@@ -16,7 +19,12 @@ public class IntroWork8Test extends ChromeDriverTest {
         driver.get(url);
 
         // TODO 以下を削除して、代わりに「Last」ボタンまでスクロールする処理を記述してください
-        Thread.sleep(8000);
+        Thread.sleep(3000);
+        WebElement target = driver.findElement(By.id("last_button"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(target);
+        actions.perform();
+        Thread.sleep(3000);
         // TODO ここまで削除してください
     }
 }
